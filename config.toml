@@ -174,6 +174,35 @@ changelog-keywords = ["CamScanner"]
 [CamScanner.patches]
 "github:hoo-dles/morphe-patches" = []
 
+# ibis Paint X was removed from APKMirror after a DMCA notice by ibis inc., so the
+# stock APK has to be provided as a GitHub release asset instead:
+#   release tag + title: jp.ne.ibis.ibispaintx.app
+#   asset name:          jp.ne.ibis.ibispaintx.app-<version>-arm64-v8a.apk (.apkm for a split bundle)
+[ibis-Paint-X]
+enabled = false
+brand = "hoo-dles"
+app-name = "ibis Paint X"
+github-dlurl = "https://github.com/TherealCitali/builder-for-morphe/releases/tag/jp.ne.ibis.ibispaintx.app"
+arch = "arm64-v8a"
+changelog-keywords = ["Ibis"]
+
+[ibis-Paint-X.patches]
+"github:hoo-dles/morphe-patches" = []
+
+# Last 13.x release (13.1.19) built with morphe-patches v1.20.0, the final patch release
+# that still targets 13.1.19 (v1.21.0 moved "Enable Prime membership" to 14.0.0).
+[ibis-Paint-X-13]
+enabled = true
+brand = "hoo-dles"
+app-name = "ibis Paint X 13"
+github-dlurl = "https://github.com/TherealCitali/builder-for-morphe/releases/tag/jp.ne.ibis.ibispaintx.app"
+arch = "arm64-v8a"
+version = "13.1.19"
+changelog-keywords = ["Ibis"]
+
+[ibis-Paint-X-13.patches]
+"github:hoo-dles/morphe-patches" = { version = "v1.20.0" }
+
 [InShot]
 enabled = false
 brand = "hooman"
